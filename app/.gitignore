@@ -1,0 +1,34 @@
+# Application
+web/app/*
+!web/app/mu-plugins
+!web/app/plugins
+!web/app/themes
+
+# WordPress
+web/wp
+web/.htaccess
+
+# Logs
+*.log
+
+# DB
+*.sql
+
+# Dotenv
+.env
+
+# Composer
+/vendor
+
+# WP-CLI
+wp-cli.local.yml
+
+# OS
+.DS_Store
+
+# Dependencies
+**/node_modules
+
+# Local WP
+/sql
+/public
