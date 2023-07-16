@@ -1,0 +1,184 @@
+// ------------------------------------------------------------------------------ //
+//  CONFIG
+// ------------------------------------------------------------------------------ //
+
+// Root ----------------------------------------- //
+
+$rem: 10px;
+
+// Breakpoints ---------------------------------- //
+
+$mobile: 375px;
+$tablet: 782px;
+$laptop: 1000px;
+$desktop: 1200px;
+$desktop-xl: 1600px;
+
+$wpmobile: 600px; // Do not change
+$wptablet: 782px; // Do not change
+
+$sidebar-bp: $laptop;
+
+// Alignments ---------------------------------- //
+
+$alignments: ("sidebar": 440px,
+	"thin": 640px,
+	"small": 800px,
+	"default": 980px,
+	"medium": 1200px,
+	"wide": 1536px,
+);
+
+// Fluid Range ----------------------------------------- //
+
+$fluid-min: $tablet;
+$fluid-max: $desktop-xl;
+
+// Spacing ---------------------------------- //
+
+$spacing-unit: 16px;
+$paragraph-spacing: 1.5em;
+
+// Gutter
+$gutter-min: 32px;
+$gutter-max: 192px;
+
+// Typography ---------------------------------- //
+
+// Body
+$body-font: "interstate",
+-apple-system,
+BlinkMacSystemFont,
+"Helvetica Neue",
+Helvetica,
+sans-serif;
+$body-font-size-min: 17px;
+$body-font-size-max: 19px;
+$body-line-height-min: 1.5;
+$body-line-height-max: 1.5;
+$body-font-weight: 400;
+$body-font-weight-bold: 700;
+$body-letter-spacing: 0;
+$body-text-transform: none;
+
+// Headings
+$heading-font: "stolzl",
+-apple-system,
+BlinkMacSystemFont,
+"Helvetica Neue",
+Helvetica,
+sans-serif;
+$heading-font-weight: 300;
+$heading-font-weight-bold: 700;
+$heading-letter-spacing: -0.01em;
+$heading-text-transform: none;
+
+// H1
+$h1-font-size-min: 38px;
+$h1-font-size-max: 60px;
+$h1-line-height-min: 1.25;
+$h1-line-height-max: 1.25;
+$h1-font: var(--ag-heading-font);
+$h1-font-weight: var(--ag-heading-font-weight);
+$h1-letter-spacing: var(--ag-heading-letter-spacing);
+$h1-text-transform: var(--ag-heading-text-transform);
+
+// H2
+$h2-font-size-min: 30px;
+$h2-font-size-max: 42px;
+$h2-line-height-min: 1.3;
+$h2-line-height-max: 1.35;
+$h2-font: var(--ag-heading-font);
+$h2-font-weight: var(--ag-heading-font-weight);
+$h2-letter-spacing: var(--ag-heading-letter-spacing);
+$h2-text-transform: var(--ag-heading-text-transform);
+
+// H3
+$h3-font-size-min: 26px;
+$h3-font-size-max: 32px;
+$h3-line-height-min: 1.4;
+$h3-line-height-max: 1.35;
+$h3-font: var(--ag-heading-font);
+$h3-font-weight: var(--ag-heading-font-weight);
+$h3-letter-spacing: var(--ag-heading-letter-spacing);
+$h3-text-transform: var(--ag-heading-text-transform);
+
+// H4
+$h4-font-size-min: 24px;
+$h4-font-size-max: 28px;
+$h4-line-height-min: 1.45;
+$h4-line-height-max: 1.4;
+$h4-font: var(--ag-heading-font);
+$h4-font-weight: 400;
+$h4-letter-spacing: var(--ag-heading-letter-spacing);
+$h4-text-transform: var(--ag-heading-text-transform);
+
+// H5
+$h5-font-size-min: 22px;
+$h5-font-size-max: 26px;
+$h5-line-height-min: 1.45;
+$h5-line-height-max: 1.4;
+$h5-font: var(--ag-heading-font);
+$h5-font-weight: 400;
+$h5-letter-spacing: var(--ag-heading-letter-spacing);
+$h5-text-transform: var(--ag-heading-text-transform);
+
+// H6
+$h6-font-size-min: 21px;
+$h6-font-size-max: 24px;
+$h6-line-height-min: 1.4;
+$h6-line-height-max: 1.45;
+$h6-font: var(--ag-heading-font);
+$h6-font-weight: 400;
+$h6-letter-spacing: var(--ag-heading-letter-spacing);
+$h6-text-transform: var(--ag-heading-text-transform);
+
+// Colors ---------------------------------- //
+/* Color palette */
+$colours: ("black": #141314,
+	"purple": #5400fc,
+	"blue": #00ddff,
+	"light-grey": #b3b2b2,
+	"white": #f4f2f9,
+);
+
+// Buttons ---------------------------------- //
+$button-font: var(--ag-heading-font);
+$button-font-weight: 400;
+$button-font-size-min: 17px;
+$button-font-size-max: 18px;
+$button-border-radius: 5px;
+$button-border-width: 2px;
+$button-padding-x: 24px;
+$button-padding-y: 16px;
+$button-background-color: var(--ag-purple-color);
+$button-text-color: var(--ag-white-color);
+
+$button-background-color-active: var(--ag-blue-color);
+$button-text-color-active: var(--ag-white-color);
+
+// Site Header ---------------------------------- //
+
+$site-header-background-color: var(--ag-purple);
+$site-header-text-color: var(--ag-white);
+$site-header-logo-height-min: 5.6rem;
+$site-header-logo-height-max: 9.6rem;
+
+// Site Footer ---------------------------------- //
+
+$site-footer-background-color: var(--ag-black);
+$site-footer-text-color: var(--ag-white);
+$site-footer-border-color: var(--ag-light-grey);
+$site-footer-font-size: var(--ag-body-font-size);
+$site-footer-line-height: 1.3;
+$site-footer-font-weight: 500;
+
+$site-footer-copyright-text-color: var(--ag-grey);
+$site-footer-copyright-font-size: 1.6rem;
+$site-footer-copyright-line-height: 1.25;
+
+// Transitions ---------------------------------- //
+
+$trans-speed: 0.15s;
+$trans-speed-slow: 0.25s;
+$trans-ease: cubic-bezier(0.5, 0, 0, 1);

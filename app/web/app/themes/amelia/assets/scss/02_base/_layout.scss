@@ -1,0 +1,11 @@
+// LAYOUT
+.site-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.section-inner {
+	margin: 0 auto;
+	max-width: var(--ag-width-medium);
+	width: calc(100% - var(--ag-gutter));
+}

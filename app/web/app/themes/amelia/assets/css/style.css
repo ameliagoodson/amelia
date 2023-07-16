@@ -1,0 +1,536 @@
+/* Color palette */
+:root {
+  /* COLOURS ----------------------------------------- */
+  --ag-black-color: #141314;
+  --ag-purple-color: #5400fc;
+  --ag-blue-color: #00ddff;
+  --ag-light-grey-color: #b3b2b2;
+  --ag-white-color: #f4f2f9;
+  /* Color variables */
+  --ag-background-color: var(--ag-white-color);
+  --ag-body-font-color: var(--ag-black-color);
+  /* LAYOUT ----------------------------------------- */
+  /* Alignments */
+  --ag-width-sidebar: 44rem;
+  --ag-width-thin: 64rem;
+  --ag-width-small: 80rem;
+  --ag-width-default: 98rem;
+  --ag-width-medium: 120rem;
+  --ag-width-wide: 153.6rem;
+  /* TYPOGRAPHY ----------------------------------------- */
+  /* Body */
+  --ag-body-font-size: clamp(1.7rem, calc(0.2vw + 1.509rem), 1.9rem);
+  --ag-body-line-height: clamp(2.55rem, calc(0.4vw + 2.263rem), 2.85rem);
+  --ag-body-font: "interstate", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  --ag-body-font-weight: 400;
+  --ag-body-font-weight-bold: 700;
+  --ag-body-letter-spacing: 0;
+  --ag-body-text-transform: none;
+  --ag-paragraph-spacing: 1.5em;
+  /* Headings */
+  --ag-heading-font: "stolzl", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  --ag-heading-font-weight: 300;
+  --ag-heading-font-weight-bold: 700;
+  --ag-heading-letter-spacing: -0.01em;
+  --ag-heading-text-transform: none;
+  --ag-h1-font-size: clamp(3.8rem, calc(2.7vw + 1.697rem), 6rem);
+  --ag-h1-line-height: clamp(4.75rem, calc(3.4vw + 2.121rem), 7.5rem);
+  --ag-h1-font: var(--ag-heading-font);
+  --ag-h1-font-weight: var(--ag-heading-font-weight);
+  --ag-h1-letter-spacing: var(--ag-heading-letter-spacing);
+  --ag-h1-text-transform: var(--ag-heading-text-transform);
+  --ag-h1-font-size-long: clamp(3rem, calc(2.4vw + 2.082rem), 6rem);
+  --ag-h1-line-height-long: clamp(3.9rem, calc(2.9vw + 2.798rem), 7.5rem);
+  --ag-h2-font-size: clamp(3rem, calc(1.5vw + 1.853rem), 4.2rem);
+  --ag-h2-line-height: clamp(3.9rem, calc(2.2vw + 2.208rem), 5.67rem);
+  --ag-h2-font: var(--ag-heading-font);
+  --ag-h2-font-weight: var(--ag-heading-font-weight);
+  --ag-h2-letter-spacing: var(--ag-heading-letter-spacing);
+  --ag-h2-text-transform: var(--ag-heading-text-transform);
+  --ag-h3-font-size: clamp(2.6rem, calc(0.7vw + 2.026rem), 3.2rem);
+  --ag-h3-line-height: clamp(3.64rem, calc(0.8vw + 2.99rem), 4.32rem);
+  --ag-h3-font: var(--ag-heading-font);
+  --ag-h3-font-weight: var(--ag-heading-font-weight);
+  --ag-h3-letter-spacing: var(--ag-heading-letter-spacing);
+  --ag-h3-text-transform: var(--ag-heading-text-transform);
+  --ag-h4-font-size: clamp(2.4rem, calc(0.5vw + 2.018rem), 2.8rem);
+  --ag-h4-line-height: clamp(3.48rem, calc(0.5vw + 3.059rem), 3.92rem);
+  --ag-h4-font: var(--ag-heading-font);
+  --ag-h4-font-weight: 400;
+  --ag-h4-letter-spacing: var(--ag-heading-letter-spacing);
+  --ag-h4-text-transform: var(--ag-heading-text-transform);
+  --ag-h5-font-size: clamp(2.2rem, calc(0.5vw + 1.818rem), 2.6rem);
+  --ag-h5-line-height: clamp(3.19rem, calc(0.6vw + 2.76rem), 3.64rem);
+  --ag-h5-font: var(--ag-heading-font);
+  --ag-h5-font-weight: 400;
+  --ag-h5-letter-spacing: var(--ag-heading-letter-spacing);
+  --ag-h5-text-transform: var(--ag-heading-text-transform);
+  --ag-h6-font-size: clamp(2.1rem, calc(0.4vw + 1.813rem), 2.4rem);
+  --ag-h6-line-height: clamp(2.94rem, calc(0.7vw + 2.424rem), 3.48rem);
+  --ag-h6-font: var(--ag-heading-font);
+  --ag-h6-font-weight: 400;
+  --ag-h6-letter-spacing: var(--ag-heading-letter-spacing);
+  --ag-h6-text-transform: var(--ag-heading-text-transform);
+  /* LAYOUT ----------------------------------------- */
+  /* Gutter */
+  --ag-gutter-lg: clamp(6.4rem, calc(10.4vw + 2.482rem), 19.2rem);
+  --ag-gutter: clamp(3.2rem, calc(13.1vw - 1.698rem), 19.2rem);
+  --gap: clamp(1.6rem, calc(6.5vw - 0.849rem), 9.6rem);
+  --spacer: clamp(2.4rem, calc(2vw + 1.665rem), 4.8rem);
+  /* Spacing */
+  --spacer-xxs: clamp(1.2rem, calc(0.3vw + 1.078rem), 1.6rem);
+  --spacer-xs: clamp(1.6rem, calc(0.7vw + 1.355rem), 2.4rem);
+  --spacer-sm: clamp(2.4rem, calc(0.7vw + 2.155rem), 3.2rem);
+  --spacer-md: clamp(2.4rem, calc(2vw + 1.665rem), 4.8rem);
+  --spacer-lg: clamp(2.4rem, calc(3.3vw + 1.176rem), 6.4rem);
+  --spacer-xl: clamp(3.2rem, calc(2.6vw + 2.22rem), 6.4rem);
+  --spacer-xxl: clamp(4.8rem, calc(3.9vw + 3.331rem), 9.6rem);
+  /* BUTTONS  ----------------------------------------- */
+  --ag-button-font: var(--ag-heading-font);
+  --ag-button-font-weight: 400;
+  --ag-button-border-radius: 0.5rem;
+  --ag-button-border-width: 0.2rem;
+  --ag-button-padding-x: 24px;
+  --ag-button-padding-y: 16px;
+  --ag-button-background-color: var(--ag-purple-color);
+  --ag-button-text-color: var(--ag-white-color);
+  --ag-button-font-size: clamp(1.7rem, calc(0.1vw + 1.604rem), 1.8rem);
+  --ag-button-background-color-active: var(--ag-blue-color);
+  --ag-button-text-color-active: var(--ag-white-color);
+}
+:root :root .mw-sidebar {
+  max-width: var(--ag-width-sidebar);
+}
+:root :root .mw-thin {
+  max-width: var(--ag-width-thin);
+}
+:root :root .mw-small {
+  max-width: var(--ag-width-small);
+}
+:root :root .mw-default {
+  max-width: var(--ag-width-default);
+}
+:root :root .mw-medium {
+  max-width: var(--ag-width-medium);
+}
+:root :root .mw-wide {
+  max-width: var(--ag-width-wide);
+}
+
+.site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.section-inner {
+  margin: 0 auto;
+  max-width: var(--ag-width-medium);
+  width: calc(100% - var(--ag-gutter));
+}
+
+html,
+body {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+address,
+big,
+cite,
+code,
+em,
+font,
+img,
+small,
+strike,
+sub,
+sup,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tr,
+th,
+td {
+  border: none;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+}
+
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+/* ------------------------------------------------------------------------------ /*
+/*  SETUP
+/* ------------------------------------------------------------------------------ */
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+/* Fix for the admin bar */
+@media (max-width: 599px) {
+  html.scroll-locked {
+    margin: 0 !important;
+  }
+}
+body {
+  background-color: var(--ag-background-color) !important;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: var(--ag-primary-color);
+  font-family: var(--ag-body-font);
+  font-size: var(--ag-body-font-size);
+  letter-spacing: var(--ag-body-letter-spacing);
+  height: 100vh;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-marquee-increment: 0vw;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.175em;
+  word-break: break-word;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+::-moz-selection {
+  background: var(--ag-selection-text-background-color);
+  color: var(--ag-selection-text-color);
+}
+
+::selection {
+  background: var(--ag-selection-text-background-color);
+  color: var(--ag-selection-text-color);
+}
+
+/* Clearing ---------------------------------- */
+.group:after,
+.entry-content:after,
+[class*=__inner-container]:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+/* Contain Margins --------------------------- */
+:root .contain-margins > *:first-child,
+:root .entry-content > *:first-child,
+:root .wp-site-blocks > *:first-child,
+:root .wp-site-blocks > .skip-link + *,
+:root .comment-content > *:first-child,
+:root *[class*=_inner-container] > *:first-child,
+:root *[class*=_inner-container] > .wp-block-image:first-child > [class*=align],
+:root fieldset > *:first-child,
+:root form > *:first-child,
+:root .wp-block-column > *:first-child,
+:root .wp-block-media-text__content > *:first-child {
+  margin-top: 0;
+}
+
+:root .contain-margins > *:last-child,
+:root .wp-site-blocks > *:last-child,
+:root .entry-content > *:last-child,
+:root .comment-content > *:last-child,
+:root *[class*=_inner-container] > *:last-child,
+:root *[class*=_inner-container] > .wp-block-image:last-child > [class*=align],
+:root fieldset > *:last-child,
+:root form > *:last-child,
+:root .wp-block-column > *:last-child,
+:root .wp-block-media-text__content > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Screen Reader Text ------------------------ */
+.screen-reader-text {
+  clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
+  height: 0.1rem;
+  overflow: hidden;
+  position: absolute !important;
+  left: -999999rem;
+  width: 0.1rem;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  height: auto;
+  left: 0.5rem;
+  line-height: normal;
+  padding: 1.5rem 2.3rem 1.4rem 2.3rem;
+  text-decoration: none;
+  top: 0.5rem;
+  width: auto;
+  z-index: 100000;
+}
+
+/* Skip Link --------------------------------- */
+.skip-link {
+  position: absolute;
+  left: -9999rem;
+  top: 2.5rem;
+  z-index: 999999999;
+}
+
+.skip-link:focus {
+  left: 2.5rem;
+  text-decoration: none;
+}
+
+/* Accessibility Settings -------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+    -webkit-animation-duration: 0s !important;
+            animation-duration: 0s !important;
+    -webkit-transition-delay: 0s !important;
+            transition-delay: 0s !important;
+    -webkit-transition-duration: 0s !important;
+            transition-duration: 0s !important;
+  }
+}
+body.no-anim *,
+body.no-anim *:before,
+body.no-anim *:after {
+  -webkit-animation-delay: 0s !important;
+          animation-delay: 0s !important;
+  -webkit-animation-duration: 0s !important;
+          animation-duration: 0s !important;
+  -webkit-transition-delay: 0s !important;
+          transition-delay: 0s !important;
+  -webkit-transition-duration: 0s !important;
+          transition-duration: 0s !important;
+}
+
+.btn {
+  background-color: var(--ag-button-background-color);
+  color: var(--ag-button-text-color);
+  font-size: var(--ag-button-font-size);
+  font-weight: var(--ag-button-font-weight);
+  border-radius: var(--ag-button-border-radius);
+  padding: var(--ag-button-padding-y) var(--ag-button-padding-x);
+  margin: 0;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.25;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.btn:hover, .btn:focus {
+  background: var(--ag-button-background-color-active);
+  color: var(--ag-button-text-color-active);
+}
+
+/* Typography ---------------------------------- */
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--ag-heading-font);
+  -webkit-font-feature-settings: "lnum";
+          font-feature-settings: "lnum";
+  font-variant-numeric: lining-nums;
+  font-weight: var(--ag-heading-font-weight);
+  letter-spacing: var(--ag-heading-letter-spacing);
+  text-transform: var(--ag-heading-text-transform);
+  line-height: 1.25;
+  margin: min(2em, var(--ag-spacer)) 0 var(--ag-spacer-xs);
+}
+h1 strong,
+.h1 strong,
+h2 strong,
+.h2 strong,
+h3 strong,
+.h3 strong,
+h4 strong,
+.h4 strong,
+h5 strong,
+.h5 strong,
+h6 strong,
+.h6 strong {
+  font-weight: var(--ag-heading-font-weight-bold);
+}
+
+h1,
+.h1 {
+  font-size: var(--ag-h1-font-size);
+  line-height: var(--ag-h1-line-height);
+  font-family: var(--ag-h1-font);
+  font-weight: var(--ag-h1-font-weight);
+  letter-spacing: var(--ag-h1-letter-spacing);
+  text-transform: var(--ag-h1-text-transform);
+  color: hotpink;
+}
+
+h2,
+.h2 {
+  font-size: var(--ag-h2-font-size);
+  line-height: var(--ag-h2-line-height);
+  font-family: var(--ag-h2-font);
+  font-weight: var(--ag-h2-font-weight);
+  letter-spacing: var(--ag-h2-letter-spacing);
+  text-transform: var(--ag-h2-text-transform);
+}
+
+h3,
+.h3 {
+  font-size: var(--ag-h3-font-size);
+  line-height: var(--ag-h3-line-height);
+  font-family: var(--ag-h3-font);
+  font-weight: var(--ag-h3-font-weight);
+  letter-spacing: var(--ag-h3-letter-spacing);
+  text-transform: var(--ag-h3-text-transform);
+}
+
+h4,
+.h4 {
+  font-size: var(--ag-h4-font-size);
+  line-height: var(--ag-h4-line-height);
+  font-family: var(--ag-h4-font);
+  font-weight: var(--ag-h4-font-weight);
+  letter-spacing: var(--ag-h4-letter-spacing);
+  text-transform: var(--ag-h4-text-transform);
+}
+
+h5,
+.h5 {
+  font-size: var(--ag-h5-font-size);
+  line-height: var(--ag-h5-line-height);
+  font-family: var(--ag-h5-font);
+  font-weight: var(--ag-h5-font-weight);
+  letter-spacing: var(--ag-h5-letter-spacing);
+  text-transform: var(--ag-h5-text-transform);
+  margin-bottom: var(--ag-spacer-xxs);
+}
+
+h6,
+.h6 {
+  font-size: var(--ag-h6-font-size);
+  line-height: var(--ag-h6-line-height);
+  font-family: var(--ag-h6-font);
+  font-weight: var(--ag-h6-font-weight);
+  letter-spacing: var(--ag-h6-letter-spacing);
+  text-transform: var(--ag-h6-text-transform);
+  margin-bottom: var(--ag-spacer-xxs);
+}
+
+p {
+  line-height: var(--ag-body-line-height);
+  margin: 0 0 var(--ag-paragraph-spacing) 0;
+}
+
+strong {
+  font-weight: var(--ag-body-font-weight-bold);
+}
+
+a {
+  color: var(--ag-accent-color);
+  text-decoration: underline;
+  -webkit-transition-property: opacity, color;
+  transition-property: opacity, color;
+  -webkit-transition-duration: var(--ag-trans-speed);
+          transition-duration: var(--ag-trans-speed);
+  -webkit-transition-timing-function: var(--ag-trans-ease);
+          transition-timing-function: var(--ag-trans-ease);
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+footer {
+  background-color: lightpink;
+  margin-top: auto;
+  height: 10rem;
+}
+
+header {
+  background-color: lightpink;
+  height: 8rem;
+}
+
+.menu {
+  list-style-type: none;
+}
+
+.menu-main-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu-main-container ul li {
+  margin: 0 1rem;
+}
+
+.menu-footer-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.menu-footer-container ul li {
+  margin: 0 1rem;
+}

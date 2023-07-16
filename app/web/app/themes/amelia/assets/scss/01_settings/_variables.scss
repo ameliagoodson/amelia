@@ -1,0 +1,137 @@
+// ------------------------------------------------------------------------------ //
+//  VARIABLES
+// ------------------------------------------------------------------------------ //
+
+
+:root {
+
+	/* COLOURS ----------------------------------------- */
+	@each $color,
+	$hex in $colours {
+		--ag-#{$color}-color: #{$hex};
+	}
+
+	/* Color variables */
+	--ag-background-color: var(--ag-white-color);
+	--ag-body-font-color: var(--ag-black-color);
+
+
+	/* LAYOUT ----------------------------------------- */
+
+	/* Alignments */
+	@each $size,
+	$px in $alignments {
+		--ag-width-#{$size}: #{rem($px)};
+	}
+
+	@each $size,
+	$px in $alignments {
+		:root .mw-#{$size} {
+			max-width: var(--ag-width-#{$size});
+		}
+	}
+
+
+	/* TYPOGRAPHY ----------------------------------------- */
+	/* Body */
+	@include fluid(--ag-body-font-size, $body-font-size-min, $body-font-size-max);
+	@include fluid(--ag-body-line-height, $body-font-size-min * $body-line-height-min, $body-font-size-max * $body-line-height-max);
+	--ag-body-font: #{inspect($body-font)};
+	--ag-body-font-weight: #{$body-font-weight};
+	--ag-body-font-weight-bold: #{$body-font-weight-bold};
+	--ag-body-letter-spacing: #{$body-letter-spacing};
+	--ag-body-text-transform: #{$body-text-transform};
+	--ag-paragraph-spacing: #{$paragraph-spacing};
+
+	/* Headings */
+	--ag-heading-font: #{inspect($heading-font)};
+	--ag-heading-font-weight: #{$heading-font-weight};
+	--ag-heading-font-weight-bold: #{$heading-font-weight-bold};
+	--ag-heading-letter-spacing: #{$heading-letter-spacing};
+	--ag-heading-text-transform: #{$heading-text-transform};
+
+	// H1
+	@include fluid(--ag-h1-font-size, $h1-font-size-min, $h1-font-size-max);
+	@include fluid(--ag-h1-line-height, $h1-font-size-min * $h1-line-height-min, $h1-font-size-max * $h1-line-height-max);
+	--ag-h1-font: #{inspect($h1-font)};
+	--ag-h1-font-weight: #{$h1-font-weight};
+	--ag-h1-letter-spacing: #{$h1-letter-spacing};
+	--ag-h1-text-transform: #{$h1-text-transform};
+
+	// Long H1 text.
+	@include fluid(--ag-h1-font-size-long, $h2-font-size-min, $h1-font-size-max, $mobile);
+	@include fluid(--ag-h1-line-height-long, $h2-font-size-min * $h2-line-height-min, $h1-font-size-max * $h1-line-height-max, $mobile);
+
+	// H2
+	@include fluid(--ag-h2-font-size, $h2-font-size-min, $h2-font-size-max);
+	@include fluid(--ag-h2-line-height, $h2-font-size-min * $h2-line-height-min, $h2-font-size-max * $h2-line-height-max);
+	--ag-h2-font: #{inspect($h2-font)};
+	--ag-h2-font-weight: #{$h2-font-weight};
+	--ag-h2-letter-spacing: #{$h2-letter-spacing};
+	--ag-h2-text-transform: #{$h2-text-transform};
+
+	// H3
+	@include fluid(--ag-h3-font-size, $h3-font-size-min, $h3-font-size-max);
+	@include fluid(--ag-h3-line-height, $h3-font-size-min * $h3-line-height-min, $h3-font-size-max * $h3-line-height-max);
+	--ag-h3-font: #{inspect($h3-font)};
+	--ag-h3-font-weight: #{$h3-font-weight};
+	--ag-h3-letter-spacing: #{$h3-letter-spacing};
+	--ag-h3-text-transform: #{$h3-text-transform};
+
+	// H4
+	@include fluid(--ag-h4-font-size, $h4-font-size-min, $h4-font-size-max);
+	@include fluid(--ag-h4-line-height, $h4-font-size-min * $h4-line-height-min, $h4-font-size-max * $h4-line-height-max);
+	--ag-h4-font: #{inspect($h4-font)};
+	--ag-h4-font-weight: #{$h4-font-weight};
+	--ag-h4-letter-spacing: #{$h4-letter-spacing};
+	--ag-h4-text-transform: #{$h4-text-transform};
+
+	// H5
+	@include fluid(--ag-h5-font-size, $h5-font-size-min, $h5-font-size-max);
+	@include fluid(--ag-h5-line-height, $h5-font-size-min * $h5-line-height-min, $h5-font-size-max * $h5-line-height-max);
+	--ag-h5-font: #{inspect($h5-font)};
+	--ag-h5-font-weight: #{$h5-font-weight};
+	--ag-h5-letter-spacing: #{$h5-letter-spacing};
+	--ag-h5-text-transform: #{$h5-text-transform};
+
+	// H6
+	@include fluid(--ag-h6-font-size, $h6-font-size-min, $h6-font-size-max);
+	@include fluid(--ag-h6-line-height, $h6-font-size-min * $h6-line-height-min, $h6-font-size-max * $h6-line-height-max);
+	--ag-h6-font: #{inspect($h6-font)};
+	--ag-h6-font-weight: #{$h6-font-weight};
+	--ag-h6-letter-spacing: #{$h6-letter-spacing};
+	--ag-h6-text-transform: #{$h6-text-transform};
+
+
+	/* LAYOUT ----------------------------------------- */
+	/* Gutter */
+	@include fluid(--ag-gutter-lg, $gutter-min * 2, $gutter-max, $mobile); // 96px to 192px
+	@include fluid(--ag-gutter, $gutter-min, $gutter-max, $mobile); // 48px to 192px
+	@include fluid(--gap, $gutter-min * 0.5, $gutter-max * 0.5, $mobile); // 24px to 96px
+	@include fluid(--spacer, $spacing-unit * 1.5, $spacing-unit * 3, $mobile); // 24px to 48px
+
+	/* Spacing */
+	@include fluid(--spacer-xxs, $spacing-unit * 0.75, $spacing-unit, $mobile); // 12px to 16px
+	@include fluid(--spacer-xs, $spacing-unit, $spacing-unit * 1.5, $mobile); // 16px to 24px
+	@include fluid(--spacer-sm, $spacing-unit * 1.5, $spacing-unit * 2, $mobile); // 24px to 32px
+	@include fluid(--spacer-md, $spacing-unit * 1.5, $spacing-unit * 3, $mobile); // 24px to 48px
+	@include fluid(--spacer-lg, $spacing-unit * 1.5, $spacing-unit * 4, $mobile); // 24px to 64px
+	@include fluid(--spacer-xl, $spacing-unit * 2, $spacing-unit * 4, $mobile); // 32px to 64px
+	@include fluid(--spacer-xxl, $spacing-unit * 3, $spacing-unit * 6, $mobile); // 48px to 96px
+
+
+	/* BUTTONS  ----------------------------------------- */
+
+	--ag-button-font: #{$button-font};
+	--ag-button-font-weight: #{$button-font-weight};
+	--ag-button-border-radius: #{rem($button-border-radius)};
+	--ag-button-border-width: #{rem($button-border-width)};
+	--ag-button-padding-x: #{$button-padding-x};
+	--ag-button-padding-y: #{$button-padding-y};
+	--ag-button-background-color: #{$button-background-color};
+	--ag-button-text-color: #{$button-text-color};
+	@include fluid('--ag-button-font-size', $button-font-size-min, $button-font-size-max);
+
+	--ag-button-background-color-active: #{$button-background-color-active};
+	--ag-button-text-color-active: #{$button-text-color-active};
+}

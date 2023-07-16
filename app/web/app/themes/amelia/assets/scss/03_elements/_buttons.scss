@@ -1,0 +1,21 @@
+.btn {
+	background-color: var(--ag-button-background-color);
+	color: var(--ag-button-text-color);
+	font-size: var(--ag-button-font-size);
+	font-weight: var(--ag-button-font-weight);
+	border-radius: var(--ag-button-border-radius);
+	padding: var(--ag-button-padding-y) var(--ag-button-padding-x);
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+	line-height: 1.25;
+	align-items: center;
+	display: inline-flex;
+	justify-content: center;
+
+	&:hover,
+	&:focus {
+		background: var(--ag-button-background-color-active);
+		color: var(--ag-button-text-color-active);
+	}
+}
