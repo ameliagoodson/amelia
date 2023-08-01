@@ -534,3 +534,8 @@ header {
 .menu-footer-container ul li {
   margin: 0 1rem;
 }
+
+.portfolio-thumbnail {
+  max-width: 100%;
+  height: auto;
+}
