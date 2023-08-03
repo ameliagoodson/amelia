@@ -2,3 +2,19 @@
 	max-width: 100%;
 	height: auto;
 }
+
+.portfolio-work-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.portfolio-work-section > * {
+	flex: 0 1 50%;
+}
+
+@media screen and (min-width: $tablet) {
+	.portfolio-work-section {
+		flex-direction: row;
+	}
+
+}

@@ -1,5 +1,8 @@
 footer {
-	background-color: lightpink;
+	background-color: $site-footer-background-color;
 	margin-top: auto;
-	height: 10rem;
+	height: 80px;
+	color: $site-footer-text-color;
+	line-height: $site-footer-line-height;
+	font-weight: $site-footer-font-weight;
 }

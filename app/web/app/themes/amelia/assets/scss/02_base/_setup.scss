@@ -20,12 +20,11 @@ body {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	color: var(--ag-primary-color);
+	color: var(--ag-color-body-text);
 	font-family: var(--ag-body-font);
 	font-size: var(--ag-body-font-size);
 	letter-spacing: var(--ag-body-letter-spacing);
-	height: 100vh;
-	text-align: left;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 }

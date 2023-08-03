@@ -11,9 +11,16 @@
 		--ag-#{$color}-color: #{$hex};
 	}
 
-	/* Color variables */
-	--ag-background-color: var(--ag-white-color);
-	--ag-body-font-color: var(--ag-black-color);
+	/* Theme Colors */
+	--ag-background-color: #{$color-background};
+	--ag-light-background-color: #{$color-light-background};
+	--ag-dark-background-color: #{$color-dark-background};
+	--ag-color-body-text: #{$color-body-text};
+	--ag-primary-color: #{$color-primary};
+	--ag-secondary-color: #{$color-secondary};
+	--ag-border-color: #{$color-border};
+	--ag-accent-color: #{$color-accent};
+
 
 
 	/* LAYOUT ----------------------------------------- */
@@ -102,6 +109,10 @@
 	--ag-h6-letter-spacing: #{$h6-letter-spacing};
 	--ag-h6-text-transform: #{$h6-text-transform};
 
+
+	/* Text Selection */
+	--ag-selection-text-color: #{$selection-text-color};
+	--ag-selection-text-background-color: #{$selection-text-background-color};
 
 	/* LAYOUT ----------------------------------------- */
 	/* Gutter */

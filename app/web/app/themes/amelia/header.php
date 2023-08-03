@@ -8,12 +8,15 @@
 </head>
 
 <body <?php body_class() ?>>
+
   <header>
-    <nav>
-      <?php
-      wp_nav_menu(array(
-        'theme_location' => "Header"
-      ))
-      ?>
-    </nav>
+    <div class="section-inner">
+      <nav>
+        <?php
+        wp_nav_menu(array(
+          'theme_location' => "Header"
+        ))
+        ?>
+      </nav>
+    </div>
   </header>

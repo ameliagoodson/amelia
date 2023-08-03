@@ -10,10 +10,10 @@ get_header(); ?>
         <p><?php the_author() ?> on <?php the_date('F, Y') ?> in <?php the_category() ?></p>
       </div>
       <p><?php the_content() ?></p>
-
+    <?php } ?>
   </div>
 </main>
 <?php
-    }
-    get_footer();
+
+get_footer();
 ?>

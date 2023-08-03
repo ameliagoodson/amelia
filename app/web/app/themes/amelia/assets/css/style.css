@@ -1,14 +1,21 @@
 /* Color palette */
 :root {
   /* COLOURS ----------------------------------------- */
-  --ag-black-color: #141314;
   --ag-purple-color: #5400fc;
   --ag-blue-color: #00ddff;
+  --ag-green-yellow-color: #b1fb0f;
   --ag-light-grey-color: #b3b2b2;
-  --ag-white-color: #f4f2f9;
-  /* Color variables */
-  --ag-background-color: var(--ag-white-color);
-  --ag-body-font-color: var(--ag-black-color);
+  --ag-white-color: #d8dcff;
+  --ag-black-color: #0b0113;
+  /* Theme Colors */
+  --ag-background-color: var(--ag-purple-color);
+  --ag-light-background-color: var(--ag-white-color);
+  --ag-dark-background-color: var(--ag-purple-color);
+  --ag-color-body-text: var(--ag-white-color);
+  --ag-primary-color: var(--ag-green-yellow-color);
+  --ag-secondary-color: var(--ag-blue-color);
+  --ag-border-color: var(--ag-light-grey-color);
+  --ag-accent-color: var(--ag-blue-color);
   /* LAYOUT ----------------------------------------- */
   /* Alignments */
   --ag-width-sidebar: 44rem;
@@ -71,6 +78,9 @@
   --ag-h6-font-weight: 400;
   --ag-h6-letter-spacing: var(--ag-heading-letter-spacing);
   --ag-h6-text-transform: var(--ag-heading-text-transform);
+  /* Text Selection */
+  --ag-selection-text-color: var(--ag-black-color);
+  --ag-selection-text-background-color: var(--ag-blue-color);
   /* LAYOUT ----------------------------------------- */
   /* Gutter */
   --ag-gutter-lg: clamp(6.4rem, calc(10.4vw + 2.482rem), 19.2rem);
@@ -203,12 +213,11 @@ body {
   background-color: var(--ag-background-color) !important;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  color: var(--ag-primary-color);
+  color: var(--ag-color-body-text);
   font-family: var(--ag-body-font);
   font-size: var(--ag-body-font-size);
   letter-spacing: var(--ag-body-letter-spacing);
-  height: 100vh;
-  text-align: left;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,7 +433,6 @@ h1,
   font-weight: var(--ag-h1-font-weight);
   letter-spacing: var(--ag-h1-letter-spacing);
   text-transform: var(--ag-h1-text-transform);
-  color: hotpink;
 }
 
 h2,
@@ -503,14 +511,18 @@ a:hover, a:focus {
 }
 
 footer {
-  background-color: lightpink;
+  background-color: var(--ag-green-yellow-color);
   margin-top: auto;
-  height: 10rem;
+  height: 80px;
+  color: var(--ag-black-color);
+  line-height: 1.3;
+  font-weight: 500;
 }
 
 header {
-  background-color: lightpink;
-  height: 8rem;
+  background-color: var(--ag-green-yellow-color);
+  height: 80px;
+  color: var(--ag-black-color);
 }
 
 .menu {
@@ -538,4 +550,29 @@ header {
 .portfolio-thumbnail {
   max-width: 100%;
   height: auto;
+}
+
+.portfolio-work-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.portfolio-work-section > * {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+@media screen and (min-width: 782px) {
+  .portfolio-work-section {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }

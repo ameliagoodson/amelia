@@ -135,12 +135,24 @@ $h6-text-transform: var(--ag-heading-text-transform);
 
 // Colors ---------------------------------- //
 /* Color palette */
-$colours: ("black": #141314,
-	"purple": #5400fc,
+$colours: ("purple": #5400fc,
 	"blue": #00ddff,
+	"green-yellow": #b1fb0f,
 	"light-grey": #b3b2b2,
-	"white": #f4f2f9,
-);
+	"white": #d8dcff,
+	"black": #0b0113);
+
+
+
+// Theme Colors ---------------------------------- //
+$color-background: var(--ag-purple-color);
+$color-light-background: var(--ag-white-color);
+$color-dark-background: var(--ag-purple-color);
+$color-primary: var(--ag-green-yellow-color);
+$color-secondary: var(--ag-blue-color);
+$color-body-text: var(--ag-white-color);
+$color-border: var(--ag-light-grey-color);
+$color-accent: var(--ag-blue-color);
 
 // Buttons ---------------------------------- //
 $button-font: var(--ag-heading-font);
@@ -159,21 +171,20 @@ $button-text-color-active: var(--ag-white-color);
 
 // Site Header ---------------------------------- //
 
-$site-header-background-color: var(--ag-purple);
-$site-header-text-color: var(--ag-white);
+$site-header-background-color: var(--ag-green-yellow-color);
+$site-header-text-color: var(--ag-black-color);
 $site-header-logo-height-min: 5.6rem;
 $site-header-logo-height-max: 9.6rem;
 
 // Site Footer ---------------------------------- //
 
-$site-footer-background-color: var(--ag-black);
-$site-footer-text-color: var(--ag-white);
-$site-footer-border-color: var(--ag-light-grey);
+$site-footer-background-color: var(--ag-green-yellow-color);
+$site-footer-text-color: var(--ag-black-color);
 $site-footer-font-size: var(--ag-body-font-size);
 $site-footer-line-height: 1.3;
 $site-footer-font-weight: 500;
 
-$site-footer-copyright-text-color: var(--ag-grey);
+$site-footer-copyright-text-color: var(--ag-light-grey-color);
 $site-footer-copyright-font-size: 1.6rem;
 $site-footer-copyright-line-height: 1.25;
 
@@ -182,3 +193,7 @@ $site-footer-copyright-line-height: 1.25;
 $trans-speed: 0.15s;
 $trans-speed-slow: 0.25s;
 $trans-ease: cubic-bezier(0.5, 0, 0, 1);
+
+// TEXT SELECTION
+$selection-text-color: var(--ag-black-color);
+$selection-text-background-color: var(--ag-blue-color);

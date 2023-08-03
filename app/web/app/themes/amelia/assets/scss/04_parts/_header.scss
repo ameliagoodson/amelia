@@ -1,4 +1,5 @@
 header {
-	background-color: lightpink;
-	height: 8rem;
+	background-color: $site-header-background-color;
+	height: 80px;
+	color: $site-header-text-color;
 }
